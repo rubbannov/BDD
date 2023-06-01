@@ -22,11 +22,10 @@ public class DashBoardPage {
 
 
     public DashBoardPage () {
-        refreshButton.click();
-        firstButtonBalance.shouldBe(visible, Duration.ofSeconds(10));
+        refreshButton.click();;
     }
-    public int getCardBalance(int id) {
-        val text = cards.get(id).text();
+    public int getCardBalance(int index) {
+        val text = cards.get(index).text();
         return extractBalance(text);
     }
     private int extractBalance(String text) {
@@ -37,11 +36,11 @@ public class DashBoardPage {
     }
 
     public TransactionPage fromFirstToSecondCard () {
-        firstButtonBalance.click();
+        secondButtonBalance.click();
         return new TransactionPage();
     }
     private TransactionPage fromSecondToFirstCard () {
-        secondButtonBalance.click();
+        firstButtonBalance.click();
         return new TransactionPage();
     }
 }

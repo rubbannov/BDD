@@ -24,13 +24,7 @@ public class DataHelper {
     public static VerificationCode getVerificationCode () {
         return new VerificationCode("12345");
     }
-//    * cards:
-//            * first:
-//            * number: '5559 0000 0000 0001'
-//            * balance: 10 000 RUB
-//    * second:
-//            * number: '5559 0000 0000 0002'
-//            * balance: 10 000 RUB
+
     @Value
     public static class CardInfo {
         private String number;

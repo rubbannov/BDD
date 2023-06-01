@@ -16,8 +16,8 @@ public class TransactionPage {
     public TransactionPage () {
         amountField.shouldBe(Condition.visible);
     }
-    public DashBoardPage inputTransaction (DataHelper.CardInfo cardInfo) {
-        amountField.setValue(cardInfo.getBalance());
+    public DashBoardPage inputTransaction (DataHelper.CardInfo cardInfo, String transactionValue) {
+        amountField.setValue(transactionValue);
         fromField.setValue(cardInfo.getNumber());
         acceptButton.click();
         return new DashBoardPage();
